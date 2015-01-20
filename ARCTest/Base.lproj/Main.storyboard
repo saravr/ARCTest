@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvo-MO-4oB">
+                                <rect key="frame" x="200" y="51" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="hPV-Wx-NAI"/>
+                                </constraints>
+                                <state key="normal" title="Cut loose parent (strong ref)">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qEn-N4-wLe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kti-a3-YQ7">
+                                <rect key="frame" x="200" y="153" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Hrv-iX-Bb7"/>
+                                </constraints>
+                                <state key="normal" title="Cut loose parent (weak ref)">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="twoPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CnZ-IY-M6A"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press the top button first, see the contents of this label. Then press second button and see what happens!" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LoA-t9-Af2">
+                                <rect key="frame" x="56" y="264" width="489" height="247"/>
+                                <color key="backgroundColor" red="0.4378365581" green="0.59307265139999998" blue="0.85425866169999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="247" id="RxG-yf-7Qa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="LoA-t9-Af2" secondAttribute="trailing" constant="40" id="6GA-oS-zv8"/>
+                            <constraint firstItem="LoA-t9-Af2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="8Ua-Kp-7d0"/>
+                            <constraint firstItem="jvo-MO-4oB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="31" id="Jv1-4W-hIE"/>
+                            <constraint firstAttribute="centerX" secondItem="kti-a3-YQ7" secondAttribute="centerX" id="LqI-2d-Vcx"/>
+                            <constraint firstItem="LoA-t9-Af2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="86" id="TpJ-fZ-Psa"/>
+                            <constraint firstAttribute="centerX" secondItem="LoA-t9-Af2" secondAttribute="centerX" id="VOB-9E-aov"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LoA-t9-Af2" secondAttribute="bottom" constant="89" id="YLE-aA-4Ue"/>
+                            <constraint firstAttribute="centerX" secondItem="jvo-MO-4oB" secondAttribute="centerX" id="mm0-eP-74g"/>
+                            <constraint firstItem="kti-a3-YQ7" firstAttribute="top" secondItem="jvo-MO-4oB" secondAttribute="bottom" constant="72" id="oNs-kN-y2n"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6GA-oS-zv8"/>
+                                <exclude reference="TpJ-fZ-Psa"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="buttonOne" destination="jvo-MO-4oB" id="BPw-bh-0ln"/>
+                        <outlet property="buttonTwo" destination="kti-a3-YQ7" id="3Ft-LI-SYb"/>
+                        <outlet property="label" destination="LoA-t9-Af2" id="m8H-cr-1hk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="3pb-ov-0PU">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </objects>
+        </scene>
+    </scenes>
+</document>
